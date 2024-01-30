@@ -11,18 +11,16 @@ import java.net.MalformedURLException;
         //strict = true,
         monochrome = true,
         //tags = "@signup",
-        //tags = "@signInFeature",
         //tags = "@signIn",
-        //tags = "@Home",
+        tags = "@Home",
         //tags = "@Viewpage",
         //tags = "@FAQ",
-        tags = "@EditUserprofile",
+        //tags = "@EditUserprofile",
 
         glue = {"StepDefinitions", "com.arceliktv.lotr.hooks"},
         //features = {"src/test/resources/Feature"},
         features = {"src/test/resources/Feature"},
         plugin = {"pretty", "junit:target/surefire-reports/junitreports/testNGReport.xml"}
-
 )
 public class CucumberTestRunner extends AbstractTestNGCucumberTests
 {

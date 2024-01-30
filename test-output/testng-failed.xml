@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" name="Device_2_iPhone11(failed)">
+    <parameter name="port" value="4723"/>
+    <parameter name="udid" value="00008110-00167C682105401E"/>
+    <parameter name="platformName" value="iOS"/>
+    <parameter name="deviceName" value="Arcelik iPhone"/>
+    <parameter name="version" value="17.0.1"/>
+    <parameter name="systemPort" value="8203"/>
+    <classes>
+      <class name="Runner.CucumberTestRunner">
+        <methods>
+          <include name="webDriverSetup"/>
+          <include name="setUpClass"/>
+          <include name="TearDown"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- Runner.CucumberTestRunner -->
+    </classes>
+  </test> <!-- Device_2_iPhone11(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

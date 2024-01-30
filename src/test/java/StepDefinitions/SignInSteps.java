@@ -10,19 +10,6 @@ public class SignInSteps extends BaseSteps {
     public void setup() throws InterruptedException {
         setupCucumber();
     }
-    @And("^enter the email \"(.*)\" and password \"(.*)\" to login$")
-    public void enter_the_email_and_password_to_login(String email, String password){
-        getTDriver().navigate().refresh();
-        getTDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        signUpPage.clickOnLoginButton();
-        getTDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        signInPage.EnterEmail(email);
-        getTDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        signInPage.EnterPassword(password);
-        getTDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        signInPage.clickOnLoginLink();
-        getTDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-    }
     @And("^check the text email \"(.*)\" on the signIn screen$")
     public void check_the_email_on_the_signIn_screen(String text){
         signInPage.assertEmail(text);
@@ -52,9 +39,7 @@ public class SignInSteps extends BaseSteps {
         signInPage.logout();
     }
     @And("^text email is \"(.*)\" on the sign in screen$")
-    public void text_email_is_on_the_sign_in_screen(String text){
-        signInPage.emailRequired(text);
-    }
+    public void text_email_is_on_the_sign_in_screen(String text){signInPage.emailRequired(text);}
     @And("^text password is \"(.*)\" on the sign in screen$")
     public void text_password_is_on_the_sign_in_screen(String text){
         signInPage.passwordRequired(text);

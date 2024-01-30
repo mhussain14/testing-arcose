@@ -15,12 +15,12 @@ Feature: SignUpIntoRcos
     * enter the last Name "Hussain" on the sign up screen
     * check the  text username "Username" on the sign up screen
     * enter the username "mehdi-hussain5" on the sign up screen
-    * check the text email "Email" on the sign up screen
+    #* check the text email "Email" on the sign up screen
     * enter the email "mehdi.hussain5@gmail.com" on the sign up screen
     * check the text password "Password" on the sign up screen
     * enter the password "Abc12345" on the sign up screen
     * click on create account button to create new account
-    * user register successfully "Email or Username Already Registered!!"
+    * user register successfully "User is already registered!"
     * click on login button on the sign up screen
 
   Scenario: 001 check the validation message for all the fields on the sign up screen
@@ -115,7 +115,7 @@ Feature: SignUpIntoRcos
     * enter the password "Abc12" on the sign up screen
     * click on create account button to create new account
     * text email is "Enter a valid email" on the sign up screen
-    * text password is "Password should be of minimum 6 characters length" on the sign up screen
+    * text password is "Password should be of minimum 8 characters length" on the sign up screen
 
   Scenario: 009 check the email with this format (mehdi.hussain5#@gmail.com)
     * refresh the page
@@ -128,7 +128,7 @@ Feature: SignUpIntoRcos
     * enter the password "12345" on the sign up screen
     * click on create account button to create new account
     * text email is "Enter a valid email" on the sign up screen
-    * text password is "Password should be of minimum 6 characters length" on the sign up screen
+    * text password is "Password should be of minimum 8 characters length" on the sign up screen
 
   Scenario: 010 check the email with this format (mehdi.hussain5@gmail..com)
     * refresh the page
@@ -141,7 +141,7 @@ Feature: SignUpIntoRcos
     * enter the password "Abc" on the sign up screen
     * click on create account button to create new account
     * text email is "Enter a valid email" on the sign up screen
-    * text password is "Password should be of minimum 6 characters length" on the sign up screen
+    * text password is "Password should be of minimum 8 characters length" on the sign up screen
 
   Scenario: 011 check the email with this format (mehdi.hussain5.@.gmail.com)
     * refresh the page

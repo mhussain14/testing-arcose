@@ -34,7 +34,7 @@
       * text "Engagements" and click on engagement hyperlink
       * text "Favorites" and click on favorites hyperlink
       * text "Subscriptions" and click on subscription hyperlink
-      #* text "Edit" and click on edit hyperlink
+      * text "Edit" and click on edit hyperlink
       * click on log out button
 
     Scenario: 003 check the edit page
@@ -55,15 +55,15 @@
       * text about yourself "About Yourself" on the edit page
       * text biographical info "Biographical Info" on the edit page
       * update biographical info "mehdi hussain is from islamabad" on the edit page
-      #* text account "Account" on the edit page
+      * text account "Account" on the edit page
       * text username "Username" on the edit page
       * update the username "mehdi.hussain12" on the edit page
       * text email "Email" on the edit page
       * update the email "meh.hussain12@gmail.com" on the edit page
       * text password "Password" on the edit page
       * generate password by clicking on button "Generate Password" on the edit page
-      #* text language "Language" on the edit page
-      #* update language "English USA" on the edit page
+      * text language "Language" on the edit page
+      * update language "English USA" on the edit page
       * text two factor "Two Factor Authentication" on the edit page
       * click on two factor text "Go here for your two factor authentication settings..." on the edit page
       * text profile pic "Profile Picture" on the edit profile page

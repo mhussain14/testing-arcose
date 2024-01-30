@@ -50,9 +50,7 @@ public class SignUpSteps extends BaseSteps
     @And("^check the text email \"(.*)\" on the sign up screen$")
     public void check_the_text_email_on_the_sign_up_screen(String text){signUpPage.assertEmail(text); }
     @And("^enter the email \"(.*)\" on the sign up screen$")
-    public void enter_the_email_on_the_sign_up_screen(String text){
-        signUpPage.EnterEmail(text);
-    }
+    public void enter_the_email_on_the_sign_up_screen(String text){signUpPage.EnterEmail(text);}
     @And("^check the text password \"(.*)\" on the sign up screen$")
     public void assertPassword(String text){signUpPage.assertPassword(text); }
     @And("^enter the password \"(.*)\" on the sign up screen$")

@@ -32,7 +32,7 @@ public class EditUserProfilePage extends BaseScreen{
         paths.put("button favorites", By.cssSelector("div#__next > main > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) > div > button"));
         paths.put("button subscriptions", By.cssSelector("div#__next > main > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div > button"));
 
-        paths.put("button Edit", By.xpath("//div[@ id = '__next']/main/div[1]/div[1]/ div[8]/div/button"));
+        paths.put("button edit", By.xpath("//div[@ id = '__next']/main/div[1]/div[1]/ div[8]/div/button"));
         paths.put("text name", By.cssSelector("div#__next > main > div > div:nth-child(2) > div > h6:nth-child(1)"));
         paths.put("text first name", By.cssSelector("div#__next > main > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(1) > span"));
         paths.put("update first name", By.cssSelector("div#__next > main > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(1) > div > div > input"));
@@ -51,7 +51,7 @@ public class EditUserProfilePage extends BaseScreen{
         paths.put("text biographical info", By.cssSelector("div#__next > main > div > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(1) > span"));
         paths.put("update biographical info", By.cssSelector("div#__next > main > div > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(1) > div > div > textarea:nth-child(1) "));
 
-        paths.put("text Account", By.cssSelector("div#__next > main > div > div:nth-child(2) > div > h6:nth-child(7)"));
+        paths.put("text account", By.cssSelector("div#__next > main > div > div:nth-child(2) > div > h6:nth-child(7)"));
         paths.put("text username", By.cssSelector("div#__next > main > div > div:nth-child(2) > div > div:nth-child(8) > div:nth-child(1) > span"));
         paths.put("update username", By.cssSelector("div#__next > main > div > div:nth-child(2) > div > div:nth-child(8) > div:nth-child(1) > div > div > input"));
         paths.put("text email", By.cssSelector("div#__next > main > div > div:nth-child(2) > div > div:nth-child(8) > div:nth-child(2) > span"));
@@ -162,15 +162,15 @@ public class EditUserProfilePage extends BaseScreen{
         logger.info("click on favorites button, Passed");
     }
     public void clickOnSubscriptionButton(String text){
-        By profile_button = paths.get("button subscriptions");
-        assertEqualsText(text,profile_button);
-        click_btn(profile_button);
+        By subs_button = paths.get("button subscriptions");
+        assertEqualsText(text,subs_button);
+        click_btn(subs_button);
         logger.info("click on subscription button, Passed");
     }
     public void clickOnEditButton(String text){
-        By profile_button = paths.get("button edit");
-        assertEqualsText(text, profile_button);
-        click_btn(profile_button);
+        By edit_button = paths.get("button edit");
+        assertEqualsText(text, edit_button);
+        click_btn(edit_button);
         logger.info("click on edit button, Passed");
     }
     public void assertName(String text){
@@ -290,9 +290,8 @@ public class EditUserProfilePage extends BaseScreen{
         logger.info(text+ " is checked, Passed");
     }
     public void updateLanguage(String text){
-        By enter_value = paths.get("generate language");
-        assertEqualsText(text,enter_value);
-        click_btn(enter_value);
+        By enter_value = paths.get("update language");
+        setValue(enter_value,text);
         logger.info("enter new language, Passed");
     }
     public void assertTextTwoFactor(String text){

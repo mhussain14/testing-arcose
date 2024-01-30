@@ -19,10 +19,10 @@ public class SignUpPage extends BaseScreen{
         paths.put("txt Last Name", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul//form//li[2]//div//div//input[@id = 'last-name']"));
         paths.put("lbl Username", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul[1]//form//li[3]//p[text() = 'Username']"));
         paths.put("textBox username", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul[1]//form//li[3]//div//div//input[@id = 'user-name']"));
-        paths.put("lbl email", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul[1]//form//li[4]//p[text() = 'Email']"));
-        paths.put("textbox Email", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul[1]//form//li[4]//div//div//input[@id = 'register-email']"));
+        paths.put("lbl email", By.xpath("//div[@ id = 'demo-customized-menu']/div[3]/ul[1]/div/form/div[1]/li[4]/p[text() = 'Email']"));
+        paths.put("textbox Email", By.xpath("//div[@ id = 'demo-customized-menu']/div[3]/ul[1]/div/form/div[1]/li[4]/div/div/input[@ id = '-email']"));
         paths.put("lbl Password", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul[1]//form//li[5]//p[text() = 'Password']"));
-        paths.put("text Password", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul[1]//form//li[5]//div//div//input[@id = 'register-password']"));
+        paths.put("text Password", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul[1]//form//li[5]//div//div//input[@id = '-password']"));
         paths.put("Click on Login link to go login page", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul[1]//div//a[text() = 'Login']"));
         paths.put("Create Account", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul[1]//div[1]//div//button[@class = 'btn-defaultundefined']"));
         paths.put("Error Message", By.xpath("//div[@class = 'Toastify']//div//div//div[2]"));
@@ -31,8 +31,8 @@ public class SignUpPage extends BaseScreen{
         paths.put("first name is required", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul//form//li[1]//div//p[@id = 'first-name-helper-text']"));
         paths.put("last name is required", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul//form//li[2]//div//p[@id = 'last-name-helper-text']"));
         paths.put("user name is required", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul//form//li[3]//div//p[@id = 'user-name-helper-text']"));
-        paths.put("email is required", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul//form//li[4]//div//p[@id = 'register-email-helper-text']"));
-        paths.put("password is required", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul//form//li[5]//div//p[@id = 'register-password-helper-text']"));
+        paths.put("email is required", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul//form//li[4]//div//p[@id = '-email-helper-text']"));
+        paths.put("password is required", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul//form//li[5]//div//p[@id = '-password-helper-text']"));
     }
     public void clickOnLoginButton(){
          By btn_login = paths.get("click on Log In");
@@ -87,6 +87,7 @@ public class SignUpPage extends BaseScreen{
     }
     public void assertEmail(String text){
         By lbl_email= paths.get("lbl email");
+        System.out.println(getElementText(lbl_email));
         assertEqualsText(text, lbl_email);
         logger.info("Email text checked, Passed");
     }

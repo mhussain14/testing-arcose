@@ -18,7 +18,7 @@ public class SignInPage extends BaseScreen{
         paths.put("text Password", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul[1]//form//li[2]//div//div//input[@id = 'login-password']"));
         paths.put("Click on Login link to go login page", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul[1]//form//div[1]//button[@class = 'btn-defaultundefined']"));
         paths.put("email is required", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul//form//li[1]//div//p[@id = 'login-email-helper-text']"));
-        paths.put("password is required", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul//form//li[2]//div//p[@id = 'register-password-helper-text']"));
+        paths.put("password is required", By.xpath("//div[@id = 'demo-customized-menu']//div[3]//ul//form//li[2]//div//p[@id = 'login-password-helper-text']"));
 
         paths.put("Log out", By.cssSelector("div#__next > div:nth-child(1) > nav:nth-child(2) > div:nth-child(1) > div:nth-child(3) button#demo-customized-button"));
     }
